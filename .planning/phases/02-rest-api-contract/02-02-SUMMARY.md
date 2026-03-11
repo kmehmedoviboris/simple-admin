@@ -101,3 +101,12 @@ None - no external service configuration required.
 ---
 *Phase: 02-rest-api-contract*
 *Completed: 2026-03-11*
+
+## Self-Check: PASSED
+
+- TokenHelper.cs verified present on disk
+- UsersControllerTests.cs verified present on disk
+- 02-02-SUMMARY.md verified present on disk
+- Task commits 9f130a8 and 8507abc verified in git log
+- dotnet build: 0 errors, 0 warnings
+- dotnet test: 13/13 tests pass (3 Phase 1 + 10 Phase 2), 0 failures
