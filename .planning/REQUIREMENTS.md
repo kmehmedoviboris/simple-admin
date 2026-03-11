@@ -9,9 +9,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Authentication
 
-- [ ] **AUTH-01**: User can log in via Authorization Code + PKCE flow through a Razor-rendered login page
+- [x] **AUTH-01**: User can log in via Authorization Code + PKCE flow through a Razor-rendered login page
 - [ ] **AUTH-02**: User can log out and is redirected to the login page with tokens cleared
-- [ ] **AUTH-03**: All API requests include a Bearer token; unauthenticated requests return 401
+- [x] **AUTH-03**: All API requests include a Bearer token; unauthenticated requests return 401
 
 ### User Management
 
@@ -63,9 +63,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 3 | Pending |
-| AUTH-03 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Complete |
 | USER-01 | Phase 2 | Pending |
 | USER-02 | Phase 2 | Pending |
 | USER-03 | Phase 2 | Pending |
