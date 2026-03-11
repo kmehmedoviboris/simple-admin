@@ -54,7 +54,8 @@ public class OpenIddictWorker : IHostedService
 
         // Register standard OIDC scopes (required for scope validation in OpenIddict v7)
         var scopeManager = scope.ServiceProvider.GetRequiredService<IOpenIddictScopeManager>();
-        foreach (var scopeName in new[] { OpenIddictConstants.Scopes.Email, OpenIddictConstants.Scopes.Profile })
+        // Register standard OIDC scopes + custom 'api' scope (required for OpenIddict v7 scope validation)
+        foreach (var scopeName in new[] { OpenIddictConstants.Scopes.Email, OpenIddictConstants.Scopes.Profile, "api" })
         {
             if (await scopeManager.FindByNameAsync(scopeName, ct) is null)
             {
