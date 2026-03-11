@@ -46,11 +46,11 @@ Plans:
   3. PUT /api/users/{id} with a valid Bearer token updates email and/or password for an existing user
   4. DELETE /api/users/{id} with a valid Bearer token removes the user; subsequent GET confirms absence
   5. Navigating to `/openapi/v1.json` returns the full OpenAPI spec document for the running API
-**Plans**: 4 plans
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: ApplicationUser DTOs (UserListDto, CreateUserDto, UpdateUserDto), UsersController with GET/POST/PUT/DELETE, UserManager integration
-- [ ] 02-02: Startup user seed (admin + test users), OpenAPI document configuration (Scalar dev UI), end-to-end REST smoke test
+- [ ] 02-01-PLAN.md — DTOs, UsersController CRUD endpoints, OpenAPI + Scalar setup, seed test users
+- [ ] 02-02-PLAN.md — TokenHelper extraction, integration tests for all CRUD + auth + OpenAPI
 
 ### Phase 3: Vue SPA + OIDC
 **Goal**: A Vite-built Vue 3 SPA that completes Authorization Code + PKCE login against the .NET host, stores the access token, and exposes a typed API client ready for CRUD views
