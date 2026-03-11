@@ -19,6 +19,14 @@ const router = createRouter({
       component: () => import('@/views/UsersView.vue'),
     },
     {
+      path: '/users/new',
+      component: () => import('@/views/UserCreateView.vue'),
+    },
+    {
+      path: '/users/:id/edit',
+      component: () => import('@/views/UserEditView.vue'),
+    },
+    {
       path: '/',
       redirect: '/users',
     },
