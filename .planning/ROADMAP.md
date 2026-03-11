@@ -13,7 +13,7 @@ Four sequentially dependent phases deliver a working end-to-end admin panel. The
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Backend Foundation** - OpenIddict authorization server, Identity + EF Core wiring, Razor login page, and protected API scaffolding (completed 2026-03-11)
-- [ ] **Phase 2: REST API Contract** - UsersController with CRUD endpoints, OpenAPI spec generation, and seeded test data
+- [x] **Phase 2: REST API Contract** - UsersController with CRUD endpoints, OpenAPI spec generation, and seeded test data (completed 2026-03-11)
 - [ ] **Phase 3: Vue SPA + OIDC** - Vue 3 project scaffold, oidc-client-ts PKCE integration, auth store, router guard, and verified login/logout
 - [ ] **Phase 4: User CRUD Views** - DataTable list view, create/edit forms, delete confirmation, inline validation, loading states, and error toast feedback
 
@@ -92,6 +92,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Backend Foundation | 4/4 | Complete   | 2026-03-11 |
-| 2. REST API Contract | 1/2 | In Progress|  |
+| 2. REST API Contract | 2/2 | Complete   | 2026-03-11 |
 | 3. Vue SPA + OIDC | 0/2 | Not started | - |
 | 4. User CRUD Views | 0/2 | Not started | - |

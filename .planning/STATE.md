@@ -6,14 +6,14 @@ current_phase: 1
 current_phase_name: Backend Foundation
 current_plan: 4
 status: executing
-stopped_at: Completed 02-rest-api-contract/02-01-PLAN.md
-last_updated: "2026-03-11T12:20:20.498Z"
+stopped_at: Completed 02-rest-api-contract/02-02-PLAN.md
+last_updated: "2026-03-11T12:25:33.544Z"
 last_activity: 2026-03-11
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
   percent: 0
 ---
 
@@ -61,6 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-backend-foundation P03 | 8min | 2 tasks | 4 files |
 | Phase 01-backend-foundation P04 | 32min | 2 tasks | 10 files |
 | Phase 02-rest-api-contract P01 | 8min | 2 tasks | 7 files |
+| Phase 02-rest-api-contract P02 | 7min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -86,6 +87,9 @@ Recent decisions affecting current work:
 - [Phase 02-rest-api-contract]: Use synchronous .ToList() on UserManager.Users — no ToListAsync equivalent for LINQ projections over IdentityUser
 - [Phase 02-rest-api-contract]: RemovePasswordAsync + AddPasswordAsync for admin password updates (not ChangePasswordAsync which requires current password)
 - [Phase 02-rest-api-contract]: OpenAPI and Scalar endpoints registered only under IsDevelopment() guard
+- [Phase 02-rest-api-contract]: TokenHelper receives HttpClient as parameter — caller controls AllowAutoRedirect=false + HandleCookies=true; TokenHelper does not create or configure client
+- [Phase 02-rest-api-contract]: Use Guid.NewGuid() in test email addresses to prevent cross-test DB collisions on shared in-memory database
+- [Phase 02-rest-api-contract]: AuthFlowSmokeTests left untouched — existing passing tests not refactored to use TokenHelper (out of scope for this plan)
 
 ### Pending Todos
 
@@ -97,6 +101,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T12:20:20.492Z
-Stopped at: Completed 02-rest-api-contract/02-01-PLAN.md
+Last session: 2026-03-11T12:25:33.536Z
+Stopped at: Completed 02-rest-api-contract/02-02-PLAN.md
 Resume file: None
