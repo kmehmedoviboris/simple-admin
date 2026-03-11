@@ -1,0 +1,84 @@
+# Requirements: SimpleAdmin
+
+**Defined:** 2026-03-11
+**Core Value:** A working end-to-end auth code flow login that lands in a Vue 3 SPA where you can list, create, edit, and delete users.
+
+## v1 Requirements
+
+Requirements for initial release. Each maps to roadmap phases.
+
+### Authentication
+
+- [ ] **AUTH-01**: User can log in via Authorization Code + PKCE flow through a Razor-rendered login page
+- [ ] **AUTH-02**: User can log out and is redirected to the login page with tokens cleared
+- [ ] **AUTH-03**: All API requests include a Bearer token; unauthenticated requests return 401
+
+### User Management
+
+- [ ] **USER-01**: User can view a list of all users in a PrimeVue DataTable
+- [ ] **USER-02**: User can create a new user by providing email and password
+- [ ] **USER-03**: User can edit an existing user's email and optionally change their password
+- [ ] **USER-04**: User can delete a user after confirming via a confirmation dialog
+
+### UX Foundations
+
+- [ ] **UX-01**: Forms display inline validation errors for required fields and email format
+- [ ] **UX-02**: List view and form submissions show loading/busy indicators
+- [ ] **UX-03**: API failures (4xx/5xx) display toast error messages to the user
+
+## v2 Requirements
+
+Deferred to future release. Tracked but not in current roadmap.
+
+### User Management Enhancements
+
+- **USER-05**: User can search/filter the user list by email
+- **USER-06**: User can sort user list columns
+- **USER-07**: User list supports server-side pagination
+- **USER-08**: User can toggle a user's active/inactive status
+
+### Advanced Features
+
+- **ADV-01**: Role management UI for assigning roles to users
+- **ADV-02**: Audit log of user management actions
+- **ADV-03**: Bulk delete of multiple users
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| Role management UI | Not needed for POC; roles stored by Identity but no UI |
+| User profile / avatar | No file storage; email-only identity sufficient |
+| Dashboard / analytics | No meaningful metrics for in-memory POC |
+| Mobile responsiveness | Desktop-only POC |
+| Password reset / email verification | No email infrastructure for POC |
+| Two-factor authentication | Local-only POC, single-factor sufficient |
+| Persistent database | In-memory EF Core is the stated constraint |
+| Real-time updates | No WebSocket/SSE needed for POC |
+| CI/CD / deployment | Local development only |
+
+## Traceability
+
+Which phases cover which requirements. Updated during roadmap creation.
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| AUTH-01 | — | Pending |
+| AUTH-02 | — | Pending |
+| AUTH-03 | — | Pending |
+| USER-01 | — | Pending |
+| USER-02 | — | Pending |
+| USER-03 | — | Pending |
+| USER-04 | — | Pending |
+| UX-01 | — | Pending |
+| UX-02 | — | Pending |
+| UX-03 | — | Pending |
+
+**Coverage:**
+- v1 requirements: 10 total
+- Mapped to phases: 0
+- Unmapped: 10
+
+---
+*Requirements defined: 2026-03-11*
+*Last updated: 2026-03-11 after initial definition*
