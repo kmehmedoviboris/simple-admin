@@ -31,6 +31,20 @@ public class OpenIddictWorker : IHostedService
             await userManager.CreateAsync(user, "Admin1234!");
         }
 
+        // Register standard OIDC scopes (required for scope validation in OpenIddict v7)
+        var scopeManager = scope.ServiceProvider.GetRequiredService<IOpenIddictScopeManager>();
+        foreach (var scopeName in new[] { OpenIddictConstants.Scopes.Email, OpenIddictConstants.Scopes.Profile })
+        {
+            if (await scopeManager.FindByNameAsync(scopeName, ct) is null)
+            {
+                await scopeManager.CreateAsync(new OpenIddictScopeDescriptor
+                {
+                    Name = scopeName,
+                    DisplayName = scopeName
+                }, ct);
+            }
+        }
+
         // Register SPA client
         var manager = scope.ServiceProvider.GetRequiredService<IOpenIddictApplicationManager>();
         const string clientId = "simple-admin-spa";
@@ -48,6 +62,7 @@ public class OpenIddictWorker : IHostedService
                     OpenIddictConstants.Permissions.Endpoints.Token,
                     OpenIddictConstants.Permissions.GrantTypes.AuthorizationCode,
                     OpenIddictConstants.Permissions.ResponseTypes.Code,
+                    OpenIddictConstants.Permissions.Prefixes.Scope + "openid",
                     OpenIddictConstants.Permissions.Scopes.Email,
                     OpenIddictConstants.Permissions.Scopes.Profile,
                     OpenIddictConstants.Permissions.Prefixes.Scope + "api"
