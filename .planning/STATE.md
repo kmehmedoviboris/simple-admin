@@ -4,16 +4,16 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 1
 current_phase_name: Backend Foundation
-current_plan: 2
+current_plan: 3
 status: executing
-stopped_at: Completed 01-backend-foundation/01-01-PLAN.md
-last_updated: "2026-03-11T09:52:26.614Z"
+stopped_at: Completed 01-backend-foundation/01-02-PLAN.md
+last_updated: "2026-03-11T09:59:21.387Z"
 last_activity: 2026-03-11
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 4
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -31,7 +31,7 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 Current Phase: 1
 Total Phases: 4
 Current Phase Name: Backend Foundation
-Current Plan: 2
+Current Plan: 3
 Total Plans in Phase: 4
 Status: In progress
 Last Activity: 2026-03-11
@@ -57,6 +57,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-backend-foundation P01 | 4min | 2 tasks | 6 files |
+| Phase 01-backend-foundation P02 | 4min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -71,6 +72,8 @@ Recent decisions affecting current work:
 - [Phase 3]: Use `oidc-client-ts` with `sessionStorage` store (POC-appropriate); pin `@hey-api/openapi-ts` 0.93.x with `-E` flag
 - [Phase 01-backend-foundation]: Added Microsoft.AspNetCore.Identity.EntityFrameworkCore explicitly — not pulled transitively by OpenIddict 7.3.0
 - [Phase 01-backend-foundation]: InMemoryDatabaseRoot namespace is Microsoft.EntityFrameworkCore.Storage (not Infrastructure.Memory) in EF Core 10
+- [Phase 01-backend-foundation]: OpenIddictConstants.ClientTypes/Permissions (not OpenIddict.Abstractions.ClientTypes) is the correct access pattern in OpenIddict 7.3.0
+- [Phase 01-backend-foundation]: OpenIddictValidationAspNetCoreDefaults as DefaultScheme; Cookie as DefaultChallengeScheme only
 
 ### Pending Todos
 
@@ -82,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T09:52:26.608Z
-Stopped at: Completed 01-backend-foundation/01-01-PLAN.md
+Last session: 2026-03-11T09:59:21.381Z
+Stopped at: Completed 01-backend-foundation/01-02-PLAN.md
 Resume file: None

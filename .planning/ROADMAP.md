@@ -91,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Backend Foundation | 1/4 | In Progress|  |
+| 1. Backend Foundation | 2/4 | In Progress|  |
 | 2. REST API Contract | 0/2 | Not started | - |
 | 3. Vue SPA + OIDC | 0/2 | Not started | - |
 | 4. User CRUD Views | 0/2 | Not started | - |
