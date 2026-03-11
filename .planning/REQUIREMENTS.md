@@ -23,8 +23,8 @@ Requirements for initial release. Each maps to roadmap phases.
 ### UX Foundations
 
 - [ ] **UX-01**: Forms display inline validation errors for required fields and email format
-- [ ] **UX-02**: List view and form submissions show loading/busy indicators
-- [ ] **UX-03**: API failures (4xx/5xx) display toast error messages to the user
+- [x] **UX-02**: List view and form submissions show loading/busy indicators
+- [x] **UX-03**: API failures (4xx/5xx) display toast error messages to the user
 
 ## v2 Requirements
 
@@ -71,8 +71,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | USER-03 | Phase 2 | Complete |
 | USER-04 | Phase 2 | Complete |
 | UX-01 | Phase 4 | Pending |
-| UX-02 | Phase 4 | Pending |
-| UX-03 | Phase 4 | Pending |
+| UX-02 | Phase 4 | Complete |
+| UX-03 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 10 total
