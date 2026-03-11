@@ -62,11 +62,11 @@ Plans:
   3. The authenticated session persists across a page refresh (sessionStorage store)
   4. Clicking logout clears all tokens and redirects to the login page; accessing a protected SPA route again triggers the login redirect
   5. A network request to GET /api/users from the SPA includes the Authorization: Bearer header and receives a 200 response
-**Plans**: 4 plans
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Vite + Vue 3 + TypeScript + PrimeVue scaffold, Pinia authStore, Vue Router with auth guard, oidc-client-ts PKCE configuration
-- [ ] 03-02: OIDC callback route (signinRedirectCallback → /users redirect), logout action, generated API client (hey-api/openapi-ts) with Bearer token interceptor, login/logout smoke test
+- [ ] 03-01-PLAN.md — Backend logout endpoint, Vue 3 + Vite scaffold, oidc-client-ts PKCE config, Pinia authStore, Vue Router auth guard, OIDC callback/error views, PrimeVue app shell with logout
+- [ ] 03-02-PLAN.md — hey-api/openapi-ts generated API client with Bearer interceptor and 401 handling, Playwright e2e smoke tests for login/logout flow
 
 ### Phase 4: User CRUD Views
 **Goal**: A fully working admin UI where an authenticated user can list, create, edit, and delete users — with form validation, loading indicators, and error feedback on every interaction
@@ -78,7 +78,7 @@ Plans:
   3. Submitting a valid create or edit form shows a loading state on the submit button and navigates away on success
   4. Clicking delete on a user row shows a PrimeVue confirmation dialog; confirming removes the user from the list
   5. When the API returns a 4xx or 5xx response, a PrimeVue toast notification with the error message appears
-**Plans**: 4 plans
+**Plans**: 2 plans
 
 Plans:
 - [ ] 04-01: UserListView.vue with PrimeVue DataTable, loading state, and delete confirmation (ConfirmDialog)
