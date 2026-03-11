@@ -6,14 +6,14 @@ current_phase: 1
 current_phase_name: Backend Foundation
 current_plan: 4
 status: executing
-stopped_at: Completed 03-vue-spa-oidc-01-PLAN.md
-last_updated: "2026-03-11T13:10:31.467Z"
+stopped_at: Completed 03-vue-spa-oidc-02-PLAN.md
+last_updated: "2026-03-11T13:26:06.051Z"
 last_activity: 2026-03-11
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 8
-  completed_plans: 7
+  completed_plans: 8
   percent: 0
 ---
 
@@ -63,6 +63,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-rest-api-contract P01 | 8min | 2 tasks | 7 files |
 | Phase 02-rest-api-contract P02 | 7min | 2 tasks | 2 files |
 | Phase 03-vue-spa-oidc P01 | 6min | 2 tasks | 22 files |
+| Phase 03-vue-spa-oidc P02 | 13min | 2 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -93,6 +94,9 @@ Recent decisions affecting current work:
 - [Phase 02-rest-api-contract]: AuthFlowSmokeTests left untouched — existing passing tests not refactored to use TokenHelper (out of scope for this plan)
 - [Phase 03-vue-spa-oidc]: OpenIddict v7: SetEndSessionEndpointUris (not SetLogoutEndpointUris), EnableEndSessionEndpointPassthrough (not EnableLogoutEndpointPassthrough), Permissions.Endpoints.EndSession (not .Logout)
 - [Phase 03-vue-spa-oidc]: Vue 3 SPA: app.use(pinia) MUST come before app.use(router); useAuthStore() called inside beforeEach body (not module top level) to avoid Pinia initialization error
+- [Phase 03-vue-spa-oidc]: hey-api generated client embeds baseUrl from OpenAPI spec server URL — no explicit setConfig call needed in main.ts
+- [Phase 03-vue-spa-oidc]: Backend runs on port 5009 (launchSettings.json); all SPA references updated: oidcManager authority, openapi-ts.config.ts input, playwright.config.ts webServer
+- [Phase 03-vue-spa-oidc]: OpenIddict v7: ALL requested scopes (including 'api') must be registered via IOpenIddictScopeManager.CreateAsync — not just listed as permissions on the application
 
 ### Pending Todos
 
@@ -104,6 +108,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T13:10:31.461Z
-Stopped at: Completed 03-vue-spa-oidc-01-PLAN.md
+Last session: 2026-03-11T13:26:06.045Z
+Stopped at: Completed 03-vue-spa-oidc-02-PLAN.md
 Resume file: None
