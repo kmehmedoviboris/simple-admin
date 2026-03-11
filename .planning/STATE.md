@@ -6,14 +6,14 @@ current_phase: 1
 current_phase_name: Backend Foundation
 current_plan: 4
 status: executing
-stopped_at: Phase 3 context gathered
-last_updated: "2026-03-11T12:39:07.656Z"
+stopped_at: Completed 03-vue-spa-oidc-01-PLAN.md
+last_updated: "2026-03-11T13:10:31.467Z"
 last_activity: 2026-03-11
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 8
+  completed_plans: 7
   percent: 0
 ---
 
@@ -62,6 +62,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-backend-foundation P04 | 32min | 2 tasks | 10 files |
 | Phase 02-rest-api-contract P01 | 8min | 2 tasks | 7 files |
 | Phase 02-rest-api-contract P02 | 7min | 2 tasks | 2 files |
+| Phase 03-vue-spa-oidc P01 | 6min | 2 tasks | 22 files |
 
 ## Accumulated Context
 
@@ -90,6 +91,8 @@ Recent decisions affecting current work:
 - [Phase 02-rest-api-contract]: TokenHelper receives HttpClient as parameter — caller controls AllowAutoRedirect=false + HandleCookies=true; TokenHelper does not create or configure client
 - [Phase 02-rest-api-contract]: Use Guid.NewGuid() in test email addresses to prevent cross-test DB collisions on shared in-memory database
 - [Phase 02-rest-api-contract]: AuthFlowSmokeTests left untouched — existing passing tests not refactored to use TokenHelper (out of scope for this plan)
+- [Phase 03-vue-spa-oidc]: OpenIddict v7: SetEndSessionEndpointUris (not SetLogoutEndpointUris), EnableEndSessionEndpointPassthrough (not EnableLogoutEndpointPassthrough), Permissions.Endpoints.EndSession (not .Logout)
+- [Phase 03-vue-spa-oidc]: Vue 3 SPA: app.use(pinia) MUST come before app.use(router); useAuthStore() called inside beforeEach body (not module top level) to avoid Pinia initialization error
 
 ### Pending Todos
 
@@ -101,6 +104,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T12:39:07.648Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-vue-spa-oidc/03-CONTEXT.md
+Last session: 2026-03-11T13:10:31.461Z
+Stopped at: Completed 03-vue-spa-oidc-01-PLAN.md
+Resume file: None
