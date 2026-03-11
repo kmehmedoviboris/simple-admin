@@ -28,7 +28,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Exchanging the authorization code for a token at `/connect/token` returns a valid access token
   3. A GET request to a protected API endpoint with a valid Bearer token returns 200; the same request without a token returns 401
   4. A GET request to a protected API endpoint with a valid Bearer token returns 200; the same request without a token returns 401 (verifiable via curl or a REST client)
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
 - [ ] 01-01: EF Core in-memory DbContext with Identity + OpenIddict tables and shared InMemoryDatabaseRoot
@@ -46,7 +46,7 @@ Plans:
   3. PUT /api/users/{id} with a valid Bearer token updates email and/or password for an existing user
   4. DELETE /api/users/{id} with a valid Bearer token removes the user; subsequent GET confirms absence
   5. Navigating to `/openapi/v1.json` returns the full OpenAPI spec document for the running API
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
 - [ ] 02-01: ApplicationUser DTOs (UserListDto, CreateUserDto, UpdateUserDto), UsersController with GET/POST/PUT/DELETE, UserManager integration
@@ -62,7 +62,7 @@ Plans:
   3. The authenticated session persists across a page refresh (sessionStorage store)
   4. Clicking logout clears all tokens and redirects to the login page; accessing a protected SPA route again triggers the login redirect
   5. A network request to GET /api/users from the SPA includes the Authorization: Bearer header and receives a 200 response
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
 - [ ] 03-01: Vite + Vue 3 + TypeScript + PrimeVue scaffold, Pinia authStore, Vue Router with auth guard, oidc-client-ts PKCE configuration
@@ -78,7 +78,7 @@ Plans:
   3. Submitting a valid create or edit form shows a loading state on the submit button and navigates away on success
   4. Clicking delete on a user row shows a PrimeVue confirmation dialog; confirming removes the user from the list
   5. When the API returns a 4xx or 5xx response, a PrimeVue toast notification with the error message appears
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
 - [ ] 04-01: UserListView.vue with PrimeVue DataTable, loading state, and delete confirmation (ConfirmDialog)
