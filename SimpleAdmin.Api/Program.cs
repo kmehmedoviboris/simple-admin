@@ -34,7 +34,8 @@ builder.Services.AddOpenIddict()
     .AddServer(options =>
     {
         options.SetAuthorizationEndpointUris("/connect/authorize")
-               .SetTokenEndpointUris("/connect/token");
+               .SetTokenEndpointUris("/connect/token")
+               .SetEndSessionEndpointUris("/connect/logout");
         options.AllowAuthorizationCodeFlow()
                .RequireProofKeyForCodeExchange();
         options.AddDevelopmentEncryptionCertificate()
@@ -43,6 +44,7 @@ builder.Services.AddOpenIddict()
         options.UseAspNetCore()
                .EnableAuthorizationEndpointPassthrough()
                .EnableTokenEndpointPassthrough()
+               .EnableEndSessionEndpointPassthrough()
                .DisableTransportSecurityRequirement();
     })
     .AddValidation(options =>
