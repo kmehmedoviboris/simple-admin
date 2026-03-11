@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Backend Foundation** - OpenIddict authorization server, Identity + EF Core wiring, Razor login page, and protected API scaffolding (completed 2026-03-11)
 - [x] **Phase 2: REST API Contract** - UsersController with CRUD endpoints, OpenAPI spec generation, and seeded test data (completed 2026-03-11)
 - [x] **Phase 3: Vue SPA + OIDC** - Vue 3 project scaffold, oidc-client-ts PKCE integration, auth store, router guard, and verified login/logout (completed 2026-03-11)
-- [ ] **Phase 4: User CRUD Views** - DataTable list view, create/edit forms, delete confirmation, inline validation, loading states, and error toast feedback
+- [x] **Phase 4: User CRUD Views** - DataTable list view, create/edit forms, delete confirmation, inline validation, loading states, and error toast feedback (completed 2026-03-11)
 
 ## Phase Details
 
@@ -94,4 +94,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Backend Foundation | 4/4 | Complete   | 2026-03-11 |
 | 2. REST API Contract | 2/2 | Complete   | 2026-03-11 |
 | 3. Vue SPA + OIDC | 2/2 | Complete   | 2026-03-11 |
-| 4. User CRUD Views | 1/2 | In Progress|  |
+| 4. User CRUD Views | 2/2 | Complete   | 2026-03-11 |
