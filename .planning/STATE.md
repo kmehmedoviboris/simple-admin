@@ -6,14 +6,14 @@ current_phase: 1
 current_phase_name: Backend Foundation
 current_plan: 4
 status: executing
-stopped_at: Completed 01-backend-foundation/01-04-PLAN.md
-last_updated: "2026-03-11T10:44:40.751Z"
+stopped_at: Completed 02-rest-api-contract/02-01-PLAN.md
+last_updated: "2026-03-11T12:20:20.498Z"
 last_activity: 2026-03-11
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 4
-  completed_plans: 4
+  total_plans: 6
+  completed_plans: 5
   percent: 0
 ---
 
@@ -60,6 +60,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-backend-foundation P02 | 4min | 2 tasks | 2 files |
 | Phase 01-backend-foundation P03 | 8min | 2 tasks | 4 files |
 | Phase 01-backend-foundation P04 | 32min | 2 tasks | 10 files |
+| Phase 02-rest-api-contract P01 | 8min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -82,6 +83,9 @@ Recent decisions affecting current work:
 - [Phase 01-backend-foundation]: Use IdentityConstants.ApplicationScheme not CookieAuthenticationDefaults.AuthenticationScheme — they use different cookie names (.AspNetCore.Identity.Application vs .AspNetCore.Cookies)
 - [Phase 01-backend-foundation]: OpenIddict v7: set claim destinations with identity.SetDestinations(Func selector) — claims without destinations are dropped from access tokens
 - [Phase 01-backend-foundation]: OpenIddict v7 scope validation requires scope store entries for email/profile via IOpenIddictScopeManager.CreateAsync
+- [Phase 02-rest-api-contract]: Use synchronous .ToList() on UserManager.Users — no ToListAsync equivalent for LINQ projections over IdentityUser
+- [Phase 02-rest-api-contract]: RemovePasswordAsync + AddPasswordAsync for admin password updates (not ChangePasswordAsync which requires current password)
+- [Phase 02-rest-api-contract]: OpenAPI and Scalar endpoints registered only under IsDevelopment() guard
 
 ### Pending Todos
 
@@ -93,6 +97,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T10:40:36.354Z
-Stopped at: Completed 01-backend-foundation/01-04-PLAN.md
+Last session: 2026-03-11T12:20:20.492Z
+Stopped at: Completed 02-rest-api-contract/02-01-PLAN.md
 Resume file: None

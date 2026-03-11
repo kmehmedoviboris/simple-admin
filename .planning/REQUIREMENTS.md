@@ -15,10 +15,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### User Management
 
-- [ ] **USER-01**: User can view a list of all users in a PrimeVue DataTable
-- [ ] **USER-02**: User can create a new user by providing email and password
-- [ ] **USER-03**: User can edit an existing user's email and optionally change their password
-- [ ] **USER-04**: User can delete a user after confirming via a confirmation dialog
+- [x] **USER-01**: User can view a list of all users in a PrimeVue DataTable
+- [x] **USER-02**: User can create a new user by providing email and password
+- [x] **USER-03**: User can edit an existing user's email and optionally change their password
+- [x] **USER-04**: User can delete a user after confirming via a confirmation dialog
 
 ### UX Foundations
 
@@ -66,10 +66,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 3 | Pending |
 | AUTH-03 | Phase 1 | Complete |
-| USER-01 | Phase 2 | Pending |
-| USER-02 | Phase 2 | Pending |
-| USER-03 | Phase 2 | Pending |
-| USER-04 | Phase 2 | Pending |
+| USER-01 | Phase 2 | Complete |
+| USER-02 | Phase 2 | Complete |
+| USER-03 | Phase 2 | Complete |
+| USER-04 | Phase 2 | Complete |
 | UX-01 | Phase 4 | Pending |
 | UX-02 | Phase 4 | Pending |
 | UX-03 | Phase 4 | Pending |
