@@ -31,6 +31,27 @@ public class OpenIddictWorker : IHostedService
             await userManager.CreateAsync(user, "Admin1234!");
         }
 
+        // Seed test users
+        var testUsers = new[]
+        {
+            ("alice@simpleadmin.local", "Alice1234!"),
+            ("bob@simpleadmin.local", "Bob1234!")
+        };
+
+        foreach (var (email, password) in testUsers)
+        {
+            if (await userManager.FindByEmailAsync(email) is null)
+            {
+                var testUser = new ApplicationUser
+                {
+                    UserName = email,
+                    Email = email,
+                    EmailConfirmed = true
+                };
+                await userManager.CreateAsync(testUser, password);
+            }
+        }
+
         // Register standard OIDC scopes (required for scope validation in OpenIddict v7)
         var scopeManager = scope.ServiceProvider.GetRequiredService<IOpenIddictScopeManager>();
         foreach (var scopeName in new[] { OpenIddictConstants.Scopes.Email, OpenIddictConstants.Scopes.Profile })

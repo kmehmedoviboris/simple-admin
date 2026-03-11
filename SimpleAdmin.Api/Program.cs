@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using OpenIddict.Validation.AspNetCore;
+using Scalar.AspNetCore;
 using SimpleAdmin.Api.Data;
 using SimpleAdmin.Api.Models;
 using SimpleAdmin.Api.Workers;
@@ -74,6 +75,7 @@ builder.Services.AddCors(options =>
     });
 });
 builder.Services.AddControllers();
+builder.Services.AddOpenApi();
 builder.Services.AddHostedService<OpenIddictWorker>();
 
 var app = builder.Build();
@@ -82,6 +84,13 @@ app.UseRouting();
 app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();             // serves /openapi/v1.json
+    app.MapScalarApiReference();  // serves /scalar
+}
+
 app.MapControllers();
 app.MapRazorPages();
 
