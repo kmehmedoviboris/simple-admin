@@ -6,14 +6,14 @@ current_phase: 1
 current_phase_name: Backend Foundation
 current_plan: 4
 status: executing
-stopped_at: Completed 01-backend-foundation/01-03-PLAN.md
-last_updated: "2026-03-11T10:06:27.176Z"
+stopped_at: Completed 01-backend-foundation/01-04-PLAN.md
+last_updated: "2026-03-11T10:40:36.358Z"
 last_activity: 2026-03-11
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 4
-  completed_plans: 3
+  completed_plans: 4
   percent: 0
 ---
 
@@ -59,6 +59,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-backend-foundation P01 | 4min | 2 tasks | 6 files |
 | Phase 01-backend-foundation P02 | 4min | 2 tasks | 2 files |
 | Phase 01-backend-foundation P03 | 8min | 2 tasks | 4 files |
+| Phase 01-backend-foundation P04 | 32min | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,9 @@ Recent decisions affecting current work:
 - [Phase 01-backend-foundation]: OpenIddictConstants.Claims.* are the correct claim constants in v7.x (not OpenIddict.Abstractions.Claims.* which does not exist)
 - [Phase 01-backend-foundation]: GetOpenIddictServerRequest extension method requires 'using Microsoft.AspNetCore' (class is in Microsoft.AspNetCore.OpenIddictServerAspNetCoreHelpers)
 - [Phase 01-backend-foundation]: Fully-qualified @model directive required in Login.cshtml without _ViewImports.cshtml: SimpleAdmin.Api.Pages.Account.LoginModel
+- [Phase 01-backend-foundation]: Use IdentityConstants.ApplicationScheme not CookieAuthenticationDefaults.AuthenticationScheme — they use different cookie names (.AspNetCore.Identity.Application vs .AspNetCore.Cookies)
+- [Phase 01-backend-foundation]: OpenIddict v7: set claim destinations with identity.SetDestinations(Func selector) — claims without destinations are dropped from access tokens
+- [Phase 01-backend-foundation]: OpenIddict v7 scope validation requires scope store entries for email/profile via IOpenIddictScopeManager.CreateAsync
 
 ### Pending Todos
 
@@ -89,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T10:06:27.171Z
-Stopped at: Completed 01-backend-foundation/01-03-PLAN.md
+Last session: 2026-03-11T10:40:36.354Z
+Stopped at: Completed 01-backend-foundation/01-04-PLAN.md
 Resume file: None
