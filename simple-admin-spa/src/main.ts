@@ -11,6 +11,8 @@ import router from './router'
 import { client } from '@/client/client.gen'
 import { useAuthStore } from '@/stores/authStore'
 
+client.setConfig({ baseUrl: import.meta.env.VITE_API_BASE_URL })
+
 const app = createApp(App)
 const pinia = createPinia()
 
